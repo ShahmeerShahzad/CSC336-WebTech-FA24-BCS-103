@@ -89,7 +89,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsiveness Tweaks */
 @media (max-width: 576px) {
   .po-card-img {
     height: 130px;
