@@ -1,0 +1,29 @@
+:root {
+  --po-blue: #0082eb;
+  --po-bg: #f1f3f6;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--po-bg);
+  color: #333;
+}
+
+/* Header & Banner */
+.po-header { background-color: var(--po-blue); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.max-w-600 { max-width: 600px; }
+.gradient-bg { background: linear-gradient(135deg, #0082eb 0%, #00529e 100%); }
+
+/* Product Cards */
+.po-card { transition: transform 0.2s ease, box-shadow 0.2s ease; overflow: hidden; }
+.po-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important; }
+.po-card-img { height: 180px; object-fit: contain; }
+
+/* Product Detail Page Image Container */
+.po-pdp-box { background-color: #f8f9fa; min-height: 320px; display: flex; align-items: center; justify-content: center; position: relative; }
+.po-pdp-img { max-height: 260px; width: 100%; object-fit: contain; }
+.po-thumb-container { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
+.po-thumb { width: 55px; height: 55px; object-fit: contain; background: #fff; padding: 3px; border: 1px solid #dee2e6; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.po-thumb:hover, .po-thumb.active { border-color: var(--po-blue); border-width: 2px; transform: scale(1.05); }
+
+@media (max-width: 576px) { .po-card-img { height: 130px; } }
