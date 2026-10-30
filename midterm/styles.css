@@ -1,6 +1,7 @@
 :root {
   --po-blue: #0082eb;
   --po-bg: #f1f3f6;
+  --po-accent: hsl(21, 70%, 45%);
 }
 
 body {
@@ -25,5 +26,59 @@ body {
 .po-thumb-container { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
 .po-thumb { width: 55px; height: 55px; object-fit: contain; background: #fff; padding: 3px; border: 1px solid #dee2e6; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
 .po-thumb:hover, .po-thumb.active { border-color: var(--po-blue); border-width: 2px; transform: scale(1.05); }
+
+/* ==========================================================================
+   TASK 1: CSS-ONLY CATEGORY FILTER (Accent Hsl: hsl(21, 70%, 45%))
+   ========================================================================== */
+.category-filter-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.category-radio-btn {
+  display: none !important;
+}
+
+.category-filter-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 24px;
+  background-color: #ffffff;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.category-filter-btn:hover {
+  border-color: var(--po-accent);
+  color: var(--po-accent);
+}
+
+/* Checked state retains exact mandatory Accent Hue hsl(21, 70%, 45%) */
+.category-radio-btn:checked + .category-filter-btn {
+  background-color: var(--po-accent) !important;
+  border-color: var(--po-accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(199, 72, 35, 0.25);
+}
+
+/* Pure CSS Filtering Logic targeting updated categories */
+#product-section:has(#cat-trimmers:checked) .product-card:not(.cat-trimmers) {
+  display: none !important;
+}
+
+#product-section:has(#cat-audio:checked) .product-card:not(.cat-audio) {
+  display: none !important;
+}
+
+#product-section:has(#cat-mobiles:checked) .product-card:not(.cat-mobiles) {
+  display: none !important;
+}
 
 @media (max-width: 576px) { .po-card-img { height: 130px; } }

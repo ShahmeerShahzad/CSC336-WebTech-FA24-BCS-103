@@ -57,23 +57,39 @@
           <h1 class="fw-bold display-6 mb-2">Lowest Prices in Pakistan</h1>
           <p class="lead mb-0">Get 100% Original Products with Official Warranty & Fast Delivery.</p>
         </div>
-        <a href="#product-grid" class="btn btn-light text-primary btn-lg fw-bold px-4 shadow">Shop Deals</a>
+        <a href="#product-section" class="btn btn-light text-primary btn-lg fw-bold px-4 shadow">Shop Deals</a>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCT GRID -->
-  <main class="py-4" id="product-grid">
+  <!-- PRODUCT GRID SECTION -->
+  <main class="py-4" id="product-section">
     <div class="container-fluid px-3 px-lg-5">
       <div class="d-flex align-items-center justify-content-between mb-3">
         <h2 class="h4 fw-bold mb-0 text-dark">Latest Products & Flash Deals</h2>
         <a href="#" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold">View All</a>
       </div>
 
-      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-md-3">
+      <!-- TASK 1: CATEGORY FILTER RADIO BUTTONS -->
+      <div class="category-filter-wrapper mb-4">
+        <input type="radio" id="cat-all" name="category" value="all" class="category-radio-btn" checked>
+        <label for="cat-all" class="category-filter-btn">All Products</label>
+
+        <input type="radio" id="cat-trimmers" name="category" value="cat-trimmers" class="category-radio-btn">
+        <label for="cat-trimmers" class="category-filter-btn">Trimmers & Grooming</label>
+
+        <input type="radio" id="cat-audio" name="category" value="cat-audio" class="category-radio-btn">
+        <label for="cat-audio" class="category-filter-btn">Audio & Headphones</label>
+
+        <input type="radio" id="cat-mobiles" name="category" value="cat-mobiles" class="category-radio-btn">
+        <label for="cat-mobiles" class="category-filter-btn">Mobiles & Accessories</label>
+      </div>
+
+      <!-- PRODUCT GRID ROW -->
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-md-3" id="product-grid-row">
         
-        <!-- CARD 1 -->
-        <div class="col">
+        <!-- CARD 1: Trimmer -->
+        <div class="col product-card cat-trimmers">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">42% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Grooming Kit"></a>
@@ -81,7 +97,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.8</span> <span class="text-muted">(139)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">KM-6330 3 In 1 Grooming Kit</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 1,749</span><span class="text-muted text-decoration-line-through small">Rs 3,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 1,749</span><span class="text-muted text-decoration-line-through small">Rs 3,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -89,8 +105,8 @@
           </div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="col">
+        <!-- CARD 2: Audio -->
+        <div class="col product-card cat-audio">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">35% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Earbuds"></a>
@@ -98,7 +114,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.7</span> <span class="text-muted">(95)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Audionic Airbud 55 TWS Wireless</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 3,899</span><span class="text-muted text-decoration-line-through small">Rs 6,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 3,899</span><span class="text-muted text-decoration-line-through small">Rs 6,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -106,8 +122,8 @@
           </div>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="col">
+        <!-- CARD 3: Mobiles & Accessories -->
+        <div class="col product-card cat-mobiles">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">20% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Smart Watch"></a>
@@ -115,7 +131,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.9</span> <span class="text-muted">(210)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Redmi Watch 3 Active Bluetooth</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 7,999</span><span class="text-muted text-decoration-line-through small">Rs 10,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 7,999</span><span class="text-muted text-decoration-line-through small">Rs 10,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -123,8 +139,8 @@
           </div>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="col">
+        <!-- CARD 4: Mobiles & Accessories -->
+        <div class="col product-card cat-mobiles">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">15% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Smartphone"></a>
@@ -132,7 +148,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.6</span> <span class="text-muted">(340)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Infinix Note 40 Pro (8GB-256GB)</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 52,999</span><span class="text-muted text-decoration-line-through small">Rs 62,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 52,999</span><span class="text-muted text-decoration-line-through small">Rs 62,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-shield-check"></i> Official Warranty</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -140,8 +156,8 @@
           </div>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="col">
+        <!-- CARD 5: Mobiles & Accessories -->
+        <div class="col product-card cat-mobiles">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">50% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Power Bank"></a>
@@ -149,7 +165,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.5</span> <span class="text-muted">(82)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Romoss 20000mAh Fast Power Bank</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 4,499</span><span class="text-muted text-decoration-line-through small">Rs 9,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 4,499</span><span class="text-muted text-decoration-line-through small">Rs 9,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -157,8 +173,8 @@
           </div>
         </div>
 
-        <!-- CARD 6 -->
-        <div class="col">
+        <!-- CARD 6: Audio -->
+        <div class="col product-card cat-audio">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">30% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Headphones"></a>
@@ -166,7 +182,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.8</span> <span class="text-muted">(120)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Sony WH-CH520 Wireless Headphones</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 11,499</span><span class="text-muted text-decoration-line-through small">Rs 16,500</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 11,499</span><span class="text-muted text-decoration-line-through small">Rs 16,500</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -174,8 +190,8 @@
           </div>
         </div>
 
-        <!-- CARD 7 -->
-        <div class="col">
+        <!-- CARD 7: Audio -->
+        <div class="col product-card cat-audio">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">28% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Speaker"></a>
@@ -183,7 +199,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.7</span> <span class="text-muted">(67)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">JBL GO 3 Portable Bluetooth Speaker</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 8,999</span><span class="text-muted text-decoration-line-through small">Rs 12,500</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 8,999</span><span class="text-muted text-decoration-line-through small">Rs 12,500</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-shield-check"></i> Official Warranty</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
@@ -191,8 +207,8 @@
           </div>
         </div>
 
-        <!-- CARD 8 -->
-        <div class="col">
+        <!-- CARD 8: Mobiles & Accessories -->
+        <div class="col product-card cat-mobiles">
           <div class="card h-100 po-card border-0 shadow-sm rounded-3">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">18% OFF</span>
             <a href="product.html" class="text-center p-3"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&auto=format&fit=crop" class="card-img-top img-fluid po-card-img" alt="Charger"></a>
@@ -200,7 +216,7 @@
               <div class="small text-warning mb-1"><i class="bi bi-star-fill"></i> <span class="text-dark fw-bold">4.9</span> <span class="text-muted">(180)</span></div>
               <h3 class="card-title h6 text-truncate mb-1"><a href="product.html" class="text-dark text-decoration-none fw-semibold">Anker 20W PD Fast Wall Charger</a></h3>
               <div class="mt-auto">
-                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark">Rs 2,449</span><span class="text-muted text-decoration-line-through small">Rs 3,000</span></div>
+                <div class="d-flex align-items-baseline gap-2"><span class="fw-bold fs-5 text-dark product-price">Rs 2,449</span><span class="text-muted text-decoration-line-through small">Rs 3,000</span></div>
                 <span class="badge bg-success-subtle text-success mt-1"><i class="bi bi-lightning-charge-fill"></i> Fast Delivery</span>
                 <button class="btn btn-primary btn-sm w-100 mt-2 rounded-2 fw-semibold">Add to Cart</button>
               </div>
