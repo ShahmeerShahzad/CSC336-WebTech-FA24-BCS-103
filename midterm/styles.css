@@ -123,4 +123,20 @@ body {
   }
 }
 
+/* ==========================================================================
+   TASK 3: SEARCH HIDDEN & PREMIUM BADGE
+   ========================================================================== */
+.search-hidden {
+  display: none !important;
+}
+
+.badge-premium {
+  background-color: var(--po-accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
 @media (max-width: 576px) { .po-card-img { height: 130px; } }
