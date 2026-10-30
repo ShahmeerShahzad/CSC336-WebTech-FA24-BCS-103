@@ -81,4 +81,46 @@ body {
   display: none !important;
 }
 
+/* ==========================================================================
+   TASK 2: PRODUCT PAGE LAYOUT & STICKY DETAILS BOX
+   Breakpoint BP = 603px | Sticky Top Offset = 73px
+   ========================================================================== */
+.pdp-grid-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+}
+
+.pdp-area-image {
+  grid-area: image;
+}
+
+.pdp-area-details {
+  grid-area: details;
+}
+
+.pdp-area-description {
+  grid-area: description;
+}
+
+/* Responsive Grid Layout & Sticky Box at BP = 603px */
+@media (min-width: 603px) {
+  .pdp-grid-container {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas:
+      "image details"
+      "description description";
+    align-items: start; /* Essential for sticky element to move independently in grid */
+  }
+
+  .pdp-area-details {
+    position: sticky;
+    top: 73px; /* Formula: (3 mod 40) + 70 = 73px */
+    z-index: 10;
+  }
+}
+
 @media (max-width: 576px) { .po-card-img { height: 130px; } }
